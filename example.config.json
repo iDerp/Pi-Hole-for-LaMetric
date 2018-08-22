@@ -1,6 +1,6 @@
 {
     "NOTE": "DO NOT CHANGE THE VERSION FIELD",
-    "version": "v1.0.0-Testing",
+    "version": "Release #1",
     "PiHole": {
         "IP": "127.0.0.1",
         "AuthKey": "abc123"
@@ -15,5 +15,6 @@
             "AuthKey": "LaMetric #2"
         }
     ],
+    "updateInterval": 10,
     "debugMode": false
 }
