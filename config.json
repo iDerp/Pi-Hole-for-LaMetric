@@ -6,7 +6,7 @@
         "PiHole": "127.0.0.1"
     },
     "authTokens": {
-        "LaMetric": "abc123",
+        "LaMetric": "dddd",
         "PiHole": "abc123"
     }
 }
