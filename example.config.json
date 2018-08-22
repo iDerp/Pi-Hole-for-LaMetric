@@ -1,12 +1,20 @@
 {
     "NOTE": "DO NOT CHANGE THE VERSION FIELD",
-    "version": "v1.0.0-Testing",
-    "IPs": {
-        "LaMetric": ["127.0.0.1", "0.0.0.0"],
-        "PiHole": "127.0.0.1"
+    "version": "Release #1",
+    "PiHole": {
+        "IP": "127.0.0.1",
+        "AuthKey": "abc123"
     },
-    "authTokens": {
-        "LaMetric": "abc123",
-        "PiHole": "abc123"
-    }
+    "LaMetric": [
+        {
+            "IP": "127.0.0.1",
+            "AuthKey": "LaMetric #1"
+        },
+        {
+            "IP": "0.0.0.0",
+            "AuthKey": "LaMetric #2"
+        }
+    ],
+    "updateInterval": 10,
+    "debugMode": false
 }
