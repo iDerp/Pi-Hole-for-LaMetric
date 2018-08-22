@@ -18,6 +18,7 @@
   "homepage": "https://github.com/iDerp/Pi-Hole-for-LaMetric#readme",
   "dependencies": {
     "express": "^4.16.3",
+    "ora": "^3.0.0",
     "snekfetch": "^4.0.4"
   }
 }
