@@ -69,7 +69,7 @@ snek.get(`http://${config.PiHole.IP}/admin/api.php?getQueryTypes&auth=${config.P
                                             totalDNSQueries: PiHoleSummaryData.body.dns_queries_all_types,
                                             topQuery: `${Object.keys(PiHoleTopItemsData.body.top_queries)[0].toString()} (${topQueryArray[0].toString()} Queries)`,
                                             topBlockedQuery: `${Object.keys(PiHoleTopItemsData.body.top_ads)[0].toString()} (${topBlockedQueryArray[0].toString()} Queries)`,
-                                            lastBlockedQuery: PiHoleRecentBlockedData.raw
+                                            lastBlockedQuery: PiHoleRecentBlockedData.raw.toString()
                                         }).then(() => {
                                             updateIndex++;
                                             updateSpinner.succeed(`Sent update for "${LaMetricDeviceInfo2.body.name}" @ ${LaMetric.IP} to the server!`)
