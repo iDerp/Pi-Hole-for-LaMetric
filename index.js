@@ -7,6 +7,10 @@ console.log(`Starting Pi-Hole for LaMetric ${config.version}...`)
 let spinner = ora(`Testing Pi-Hole Connection @ ${config.PiHole.IP}...`).start();
 let availableLaMetrics = [];
 
+if (config.debugMode) {
+    console.log("Debug Mode Enabled")
+}
+
 snek.get(`http://${config.PiHole.IP}/admin/api.php?getQueryTypes&auth=${config.PiHole.AuthKey}`).then(PiHoleResult => {
     spinner.succeed(`Pi-Hole Connection @ ${config.PiHole.IP} Successful!`)
     spinner = ora(`Testing Pi-Hole Auth...`).start();
@@ -61,7 +65,7 @@ snek.get(`http://${config.PiHole.IP}/admin/api.php?getQueryTypes&auth=${config.P
                                         updateSpinner.text = `Sending update for "${LaMetricDeviceInfo2.body.name}" @ ${LaMetric.IP} to the server...`  
                                         let topQueryArray = Object.values(PiHoleTopItemsData.body.top_queries)  
                                         let topBlockedQueryArray = Object.values(PiHoleTopItemsData.body.top_ads)  
-                                        snek.post(`https://lametric.b1nzy.xyz/pihole/${LaMetricDeviceInfo2.body.id}`).send({
+                                        snek.post(`https://lametric.iderp.io/pihole/${LaMetricDeviceInfo2.body.id}`).send({
                                             blockListSize: PiHoleSummaryData.body.domains_being_blocked,
                                             dnsQueriesToday: PiHoleSummaryData.body.dns_queries_today,
                                             adsBlockedToday: PiHoleSummaryData.body.ads_blocked_today,
