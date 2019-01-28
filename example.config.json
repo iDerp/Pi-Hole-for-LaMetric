@@ -1,6 +1,6 @@
 {
     "NOTE": "DO NOT CHANGE THE VERSION FIELD",
-    "version": "v2.0.2",
+    "version": "v2.0.3-Beta",
     "PiHole": {
         "IP": "127.0.0.1",
         "AuthKey": "abc123"
