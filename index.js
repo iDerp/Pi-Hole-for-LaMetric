@@ -65,7 +65,7 @@ snek.get(`http://${config.PiHole.IP}/admin/api.php?getQueryTypes&auth=${config.P
                                         updateSpinner.text = `Sending update for "${LaMetricDeviceInfo2.body.name}" @ ${LaMetric.IP} to the server...`  
                                         let topQueryArray = Object.values(PiHoleTopItemsData.body.top_queries)  
                                         let topBlockedQueryArray = Object.values(PiHoleTopItemsData.body.top_ads)  
-                                        snek.post(`https://lametric.iderp.io/pihole/${LaMetricDeviceInfo2.body.id}`).send({
+                                        snek.post(`https://lametric.glitch.me/pihole/${LaMetricDeviceInfo2.body.id}`).send({
                                             blockListSize: PiHoleSummaryData.body.domains_being_blocked,
                                             dnsQueriesToday: PiHoleSummaryData.body.dns_queries_today,
                                             adsBlockedToday: PiHoleSummaryData.body.ads_blocked_today,
